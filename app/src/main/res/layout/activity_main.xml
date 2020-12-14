@@ -36,7 +36,7 @@
             android:layout_width="220dp"
             android:lineSpacingExtra="6dp"
             android:layout_height="wrap_content"
-            android:text="Guess Animals in English language"
+            android:text=" What goes through cities and fields, but never moves?"
             android:gravity="center_horizontal" />
 
     </LinearLayout>
@@ -58,7 +58,7 @@
 
     <TextView
         android:id="@+id/textTitle"
-        android:text="Ammo"
+        android:text="Letter Pool"
         android:textSize="24sp"
         android:textColor="#FFF"
         android:layout_marginRight="28dp"

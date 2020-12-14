@@ -1,34 +1,34 @@
-package com.example.myapplication;
+package com.example.quizword;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.view.Gravity;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Random;
 
-public class MainActivity extends AppCompatActivity {
+public class Level3 extends AppCompatActivity {
+
+
 
     private int presCounter = 0;
-    private int maxPresCounter = 4;
-    private String[] keys = {"R", "I", "B", "D", ""};
-    private String textAnswer = "BIRD";
+    private int maxPresCounter = 5;
+    private String[] keys = {"E", "R", "V", "R", "O", "I"};
+    private String textAnswer = "RIVER";
     TextView textScreen,textQuestion,textTitle;
-    Animation smallbigforth;
 
 
-    @Override
+     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_level3);
 
         keys = shuffleArray(keys);
 
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
             addView(((LinearLayout) findViewById(R.id.layoutParent)), key, ((EditText) findViewById(R.id.editText)));
         }
 
-        maxPresCounter = 4;
+        maxPresCounter = 5;
     }
 
     private String[] shuffleArray(String[] ar) {
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         textView.setFocusable(true);
         textView.setTextSize(32);
 
-        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/FredokaOneRegular.ttf");
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/FredokaOne-Regular.ttf");
 
         textQuestion = (TextView) findViewById(R.id.textQuestion);
         textScreen = (TextView) findViewById(R.id.textScreen);
@@ -85,23 +85,21 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(presCounter < maxPresCounter) {
-                    if (presCounter==0) {
+                    if (presCounter==0)
                         editText.setText("");
 
-                        editText.setText(editText.getText().toString() + text);
-                        textView.startAnimation(smallbigforth);
-                        textView.animate().alpha(0).setDuration(300);
-                        presCounter++;
+                    editText.setText(editText.getText().toString() + text);
+                    textView.animate().alpha(0).setDuration(300);
+                    presCounter++;
 
-                        if (presCounter == maxPresCounter)
-                            doValidate();
-
-                    }
+                    if (presCounter == maxPresCounter)
+                        doValidate();
                 }
             }
         });
 
         viewParent.addView(textView);
+
     }
 
     private void doValidate() {
@@ -111,12 +109,14 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout linearLayout = findViewById(R.id.layoutParent);
 
         if(editText.getText().toString().equals(textAnswer)) {
-            Toast.makeText(MainActivity.this,"Correct", Toast.LENGTH_SHORT).show();
-            editText.setText("");
+            Toast.makeText(Level3.this,"Correct", Toast.LENGTH_SHORT).show();
+            Intent a = new Intent(Level3.this,BossAct.class);
+            startActivity(a);
+
         } else {
-            Toast.makeText(MainActivity.this, "Wrong", Toast.LENGTH_SHORT).show();
-            editText.setText("");
+            Toast.makeText(Level3.this, "Wrong", Toast.LENGTH_SHORT).show();
         }
+        editText.setText("");
 
         keys = shuffleArray(keys);
         linearLayout.removeAllViews();
