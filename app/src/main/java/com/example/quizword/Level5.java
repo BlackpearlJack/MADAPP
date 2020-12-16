@@ -14,18 +14,18 @@ import android.widget.Toast;
 
 import java.util.Random;
 
-public class Level3 extends AppCompatActivity {
+public class Level5 extends AppCompatActivity {
 
 
 
     private int presCounter = 0;
-    private int maxPresCounter = 5;
-    private String[] keys = {"E", "R", "V", "R", "O", "I"};
-    private String textAnswer = "RIVER";
+    private int maxPresCounter = 4;
+    private String[] keys = {"A", "N", "P", "T", "K", "B"};
+    private String textAnswer = "BANK";
     TextView textScreen,textQuestion,textTitle;
 
 
-     @Override
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level3);
@@ -36,7 +36,7 @@ public class Level3 extends AppCompatActivity {
             addView(((LinearLayout) findViewById(R.id.layoutParent)), key, ((EditText) findViewById(R.id.editText)));
         }
 
-        maxPresCounter = 5;
+        maxPresCounter = 4;
     }
 
     private String[] shuffleArray(String[] ar) {
@@ -109,12 +109,12 @@ public class Level3 extends AppCompatActivity {
         LinearLayout linearLayout = findViewById(R.id.layoutParent);
 
         if(editText.getText().toString().equals(textAnswer)) {
-            Toast.makeText(Level3.this,"Correct", Toast.LENGTH_SHORT).show();
-            Intent a = new Intent(Level3.this,BossAct3.class);
+            Toast.makeText(Level5.this,"Correct", Toast.LENGTH_SHORT).show();
+            Intent a = new Intent(Level5.this,BossAct5.class);
             startActivity(a);
 
         } else {
-            Toast.makeText(Level3.this, "Wrong", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Level5.this, "Wrong", Toast.LENGTH_SHORT).show();
         }
         editText.setText("");
 

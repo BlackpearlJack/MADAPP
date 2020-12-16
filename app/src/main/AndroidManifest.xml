@@ -9,7 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizWord">
-        <activity android:name=".BossAct2"></activity>
+        <activity android:name=".Level7"></activity>
+        <activity android:name=".BossAct6" />
+        <activity android:name=".Level6" />
+        <activity android:name=".BossAct5" />
+        <activity android:name=".Level5" />
+        <activity android:name=".BossAct4" />
+        <activity android:name=".Level4" />
+        <activity android:name=".BossAct3" />
+        <activity android:name=".BossAct2" />
         <activity android:name=".Level3" />
         <activity android:name=".simp" />
         <activity android:name=".Level2" />
