@@ -28,7 +28,7 @@ public class Level6 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_level3);
+        setContentView(R.layout.activity_level6);
 
         keys = shuffleArray(keys);
 

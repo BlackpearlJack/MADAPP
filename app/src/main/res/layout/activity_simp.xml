@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/bgapp"
-    tools:context=".MainActivity">
+    tools:context=".simp">
 
   <TextView
       android:id="@+id/textScreen"
@@ -17,7 +17,7 @@
       android:textSize="22sp"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="Checkpoint Time" />
+      android:text="Last Stop" />
 
   <ImageView
       android:id="@+id/bigboss"
@@ -37,20 +37,20 @@
       android:textSize="28sp"
       android:layout_width="230dp"
       android:layout_height="wrap_content"
-      android:text="Well Done! Can you do it again?" />
+      android:text="Well Done! You made it to the end" />
 
   <Button
       android:layout_gravity="center"
       android:layout_marginTop="60dp"
       android:id="@+id/textBtn"
       android:textAllCaps="false"
-      android:textColor="@color/colorPurple"
-      android:text="Continue"
+      android:textColor="@color/white"
+      android:text="You scored 100%"
       android:paddingBottom="10dp"
       android:textSize="28sp"
       android:background="@drawable/bgbtn"
       android:layout_width="280dp"
-      android:layout_height="70dp"
+      android:layout_height="100dp"
       />
 
   <TextView

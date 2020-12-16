@@ -28,7 +28,7 @@ public class Level7 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_level3);
+        setContentView(R.layout.activity_level7);
 
         keys = shuffleArray(keys);
 

@@ -20,7 +20,7 @@ public class BossAct4 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_boss_act2);
+        setContentView(R.layout.activity_boss_act4);
 
         smalltobig = AnimationUtils.loadAnimation(this, R.anim.smalltobig);
 
@@ -42,8 +42,8 @@ public class BossAct4 extends AppCompatActivity {
         textBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent a = new Intent(BossAct4.this,Level5.class);
-                startActivity(a);
+                Intent d = new Intent(BossAct4.this,Level5.class);
+                startActivity(d);
             }
         });
 

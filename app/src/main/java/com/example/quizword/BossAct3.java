@@ -42,8 +42,8 @@ public class BossAct3 extends AppCompatActivity {
         textBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent a = new Intent(BossAct3.this,Level4.class);
-                startActivity(a);
+                Intent c = new Intent(BossAct3.this,Level4.class);
+                startActivity(c);
             }
         });
 

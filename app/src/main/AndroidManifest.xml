@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizWord">
-        <activity android:name=".Level7"></activity>
+        <activity android:name=".Level1"></activity>
+        <activity android:name=".Level7" />
         <activity android:name=".BossAct6" />
         <activity android:name=".Level6" />
         <activity android:name=".BossAct5" />

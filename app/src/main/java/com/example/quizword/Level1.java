@@ -1,34 +1,39 @@
 package com.example.quizword;
 
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.view.Gravity;
-import android.view.View;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.view.Gravity;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import java.util.Random;
+import java.util.logging.Level;
 
-public class Level5 extends AppCompatActivity {
-
-
+public class Level1 extends AppCompatActivity {
 
     private int presCounter = 0;
     private int maxPresCounter = 4;
-    private String[] keys = {"A", "N", "P", "T", "K", "B"};
-    private String textAnswer = "BANK";
+    private String[] keys = {"O", "R", "O", "D", "A","S"};
+    private String textAnswer = "ROAD";
     TextView textScreen,textQuestion,textTitle;
+    Animation smallbigforth;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_level5);
+        setContentView(R.layout.activity_level1);
+
+        smallbigforth = AnimationUtils.loadAnimation(this, R.anim.smallbigforth);
 
         keys = shuffleArray(keys);
 
@@ -89,6 +94,7 @@ public class Level5 extends AppCompatActivity {
                         editText.setText("");
 
                     editText.setText(editText.getText().toString() + text);
+                    textView.startAnimation(smallbigforth);
                     textView.animate().alpha(0).setDuration(300);
                     presCounter++;
 
@@ -109,12 +115,12 @@ public class Level5 extends AppCompatActivity {
         LinearLayout linearLayout = findViewById(R.id.layoutParent);
 
         if(editText.getText().toString().equals(textAnswer)) {
-            Toast.makeText(Level5.this,"Correct", Toast.LENGTH_SHORT).show();
-            Intent a = new Intent(Level5.this,BossAct5.class);
+            //Toast.makeText(MainActivity.this,"Correct", Toast.LENGTH_SHORT).show();
+            Intent a = new Intent(Level1.this,BossAct.class);
             startActivity(a);
 
         } else {
-            Toast.makeText(Level5.this, "Wrong", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Level1.this, "Wrong", Toast.LENGTH_SHORT).show();
         }
         editText.setText("");
 
